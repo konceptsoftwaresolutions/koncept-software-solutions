@@ -1,0 +1,25 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      backgroundColor: {
+        'custom-blue': '#0866ff',  // Custom blue color
+      },
+      fontFamily: {
+        'poppins': ['Poppins'],
+        'pixelify': ['Pixelify'],
+      },
+      colors: {
+        'custom-blue': '#0866ff',  // Custom blue color
+      },
+      borderColor: {
+        'custom-blue': '#0866ff',  // Custom blue color
+      }
+    },
+  },
+  plugins: [],
+}
