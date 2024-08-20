@@ -6,7 +6,7 @@ import { FaLocationDot } from "react-icons/fa6";
 const Footer = () => {
     return <>
         <footer className="flex justify-center items-center bg-gray-800 w-full flex-col">
-            <div className="flex justify-around items-end py-16 w-full">
+            <div className="flex justify-start md:justify-around flex-col md:flex-row items-start md:items-end px-4 gap-y-4 md:px-auto py-8 nd:py-16 w-full">
                 <div className="flex flex-col justify-center items-center">
                     <div className="flex flex-col justify-start gap-y-3 text-white items-start">
                         <h2 className="my-text font-light text-[15px]">info@example.com</h2>
@@ -23,13 +23,13 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="flex justify-center gap-x-4 items-center">
+                <div className="flex justify-center flex-col gap-y-3 sm:flex-row gap-x-4 items-center">
                     <AnimationButton>Privacy Policy</AnimationButton>
                     <AnimationButton>Terms and Condition</AnimationButton>
                 </div>
             </div>
             <div className="w-full flex justify-center items-center bg-gray-900 py-4 text-white">
-                <h2 className="text-white my-text font-light">Copyright © 2024 - 2025. All Rights Reserved. konceptsoftwaresolutions.com | Privacy Policy</h2>
+                <h2 className="text-white my-text font-light text-center">Copyright © 2024 - 2025. All Rights Reserved. konceptsoftwaresolutions.com | Privacy Policy</h2>
             </div>
         </footer>
     </>

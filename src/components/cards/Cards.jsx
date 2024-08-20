@@ -17,7 +17,7 @@ const Cards = () => {
                     ))
                 }
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eligendi, porro aspernatur reiciendis quisquam ratione dolores fuga perspiciatis, a repellendus deserunt mollitia beatae! Corporis consequatur ut labore at et, consequuntur ...</p>
+            <p className="text-[15px] md:text-[16px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eligendi, porro aspernatur reiciendis quisquam ratione dolores fuga perspiciatis, a repellendus deserunt mollitia beatae! Corporis consequatur ut labore at et, consequuntur ...</p>
             <div className="bg-gray-300 my-3 w-full h-[1px]"></div>
             <h2 className="h-full w-full flex justify-start my-text font-semibold items-center">
                 Manish Dudeja

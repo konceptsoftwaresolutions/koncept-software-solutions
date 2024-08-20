@@ -13,6 +13,14 @@ const Portfolio = () => {
         nextArrow: <NextArrow />,
         autoplay: true, // Enable auto-play
         autoplaySpeed: 2000, // Set the speed (in milliseconds) at which slides change
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false, // Disable navigation arrows
+                }
+            }
+        ]
     };
 
     const data = [
@@ -33,8 +41,8 @@ const Portfolio = () => {
         }
     ]
     return <>
-        <div className="w-full bg-gray-50 flex flex-col justify-center items-center py-16">
-            <h2 className="my-text font-medium text-[#000] text-3xl">Our Portfolio of Successful Projects</h2>
+        <div id="portfolio" className="w-full bg-gray-50 flex flex-col justify-center items-center py-16">
+            <h2 className="my-text font-medium text-[#000] text-center text-xl md:text-3xl">Our Portfolio of Successful Projects</h2>
             <p className="my-text font-medium text-[#000] text-center my-3 mx-10">Every mobile app we create, whether for iOS or Android, is a stepping stone to our collective success. That's why we're your one-stop shop for custom mobile app development on both leading platforms.</p>
             <div className="w-3/4 my-16">
                 <Slider {...settings}>

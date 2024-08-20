@@ -10,6 +10,10 @@ import ServiceCard from "../../components/cards/ServiceCard";
 import FormModal from "../../components/modals/FormModal";
 import AnimationButton from "../../components/buttons/AnimationButton";
 
+// slider
+import Slider from "react-slick";
+import { sliderSettings } from "../../constants/settings";
+
 const Services = () => {
     const [isOpen, setIsOpen] = useState(false);
     return <>
@@ -19,17 +23,27 @@ const Services = () => {
 
             <p className="my-3 px-10 my-text text-[#000] text-[16px] text-center">We understand that every business has unique digital needs. That's why we offer a comprehensive range of services designed to empower your digital transformation journey, from the ground up. Whether you're starting with a basic static website or aiming to develop a complex mobile application, we have the expertise and experience to help you achieve your goals.</p>
 
-            <div className="grid grid-cols-3 my-10 w-full">
-                <div className="flex justify-center items-center w-full">
-                    <ServiceCard icon={<CgBrowser size={80} />} title="Web Design & Development" text={"At Arramton Infotech, we understand the power of mobile apps to transform your business. Whether you envision a sleek and intuitive e-commerce platform, an engaging game that keeps users hooked, or a productivity tool that streamlines workflows, our team of expert iOS and Android app developers is here to bring your vision to life."} />
-                </div>
+            <div className="w-full flex justify-center items-center">
+                <div className="my-10 w-[90%] lg:w-[95%]">
+                    <Slider {...sliderSettings}>
+                        <div>
+                            <div className="flex justify-center items-center w-full">
+                                <ServiceCard icon={<CgBrowser size={80} />} title="Web Design & Development" text={"At Arramton Infotech, we understand the power of mobile apps to transform your business. Whether you envision a sleek and intuitive e-commerce platform, an engaging game that keeps users hooked, or a productivity tool that streamlines workflows, our team of expert iOS and Android app developers is here to bring your vision to life."} />
+                            </div>
+                        </div>
 
-                <div className="flex justify-center items-center w-full">
-                    <ServiceCard icon={<TbSettingsCode size={70} />} title="Custom Software Development" text={"One-size-fits-all software solutions can often hinder your business's growth and efficiency. That’s why, we believe in custom software development. Our team of experienced developers works closely with you to understand your unique business challenges and goals. We use agile methodologies and the latest technologies to create bespoke software solutions that perfectly align with your specific needs."} />
-                </div>
+                        <div>
+                            <div className="flex justify-center items-center w-full">
+                                <ServiceCard icon={<TbSettingsCode size={70} />} title="Custom Software Development" text={"One-size-fits-all software solutions can often hinder your business's growth and efficiency. That’s why, we believe in custom software development. Our team of experienced developers works closely with you to understand your unique business challenges and goals. We use agile methodologies and the latest technologies to create bespoke software solutions that perfectly align with your specific needs."} />
+                            </div>
+                        </div>
 
-                <div className="flex justify-center items-center w-full">
-                    <ServiceCard icon={<FaWhatsappSquare size={70} />} title="Whatsapp Business Integration" text={"At Arramton Infotech, we understand the power of mobile apps to transform your business. Whether you envision a sleek and intuitive e-commerce platform, an engaging game that keeps users hooked, or a productivity tool that streamlines workflows, our team of expert iOS and Android app developers is here to bring your vision to life."} />
+                        <div>
+                            <div className="flex justify-center items-center w-full">
+                                <ServiceCard icon={<FaWhatsappSquare size={70} />} title="Whatsapp Business Integration" text={"At Arramton Infotech, we understand the power of mobile apps to transform your business. Whether you envision a sleek and intuitive e-commerce platform, an engaging game that keeps users hooked, or a productivity tool that streamlines workflows, our team of expert iOS and Android app developers is here to bring your vision to life."} />
+                            </div>
+                        </div>
+                    </Slider>
                 </div>
             </div>
 
