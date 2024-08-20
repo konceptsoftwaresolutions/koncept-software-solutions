@@ -21,7 +21,7 @@ const MyModal = ({ open = true, setOpen = function(){}, children }) => {
                 {/* modal */}
                 <div className={`flex flex-col justify-center overflow-hidden transition-all duration-500 ${open ? "mt-0": "-mt-96"} rounded-lg items-center w-[95%] sm:w-3/4 md:w-1/2`}>
                     <div className="bg-custom-blue flex justify-between items-center py-3 px-4 w-full">
-                        <h2 className="font-poppins not-italic leading-normal font-medium text-white text-lg">Contact US</h2>
+                        <h2 className="font-montserrat not-italic leading-normal font-medium text-white text-lg">Contact US</h2>
                         <button className="cursor-pointer text-white active:text-gray-200" onClick={() => setOpen(false)}>
                             <RxCross2 size={20} />
                         </button>

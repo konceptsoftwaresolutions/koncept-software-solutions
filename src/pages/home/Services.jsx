@@ -14,10 +14,10 @@ const Services = () => {
     const [isOpen, setIsOpen] = useState(false);
     return <>
         <FormModal open={isOpen} setOpen={setIsOpen} />
-        <div className="py-10 flex flex-col justify-center items-center">
-            <h2 className="font-poppins not-italic text-3xl leading-normal font-medium text-[#000]">Our Core Services</h2>
+        <div className="py-20 flex flex-col justify-center items-center">
+            <h2 className="font-montserrat not-italic text-3xl leading-normal font-medium text-[#000]">Our Core Services</h2>
 
-            <p className="my-3 px-10 my-text font-light text-[#000] text-[16px] text-center">We understand that every business has unique digital needs. That's why we offer a comprehensive range of services designed to empower your digital transformation journey, from the ground up. Whether you're starting with a basic static website or aiming to develop a complex mobile application, we have the expertise and experience to help you achieve your goals.</p>
+            <p className="my-3 px-10 my-text text-[#000] text-[16px] text-center">We understand that every business has unique digital needs. That's why we offer a comprehensive range of services designed to empower your digital transformation journey, from the ground up. Whether you're starting with a basic static website or aiming to develop a complex mobile application, we have the expertise and experience to help you achieve your goals.</p>
 
             <div className="grid grid-cols-3 my-10 w-full">
                 <div className="flex justify-center items-center w-full">

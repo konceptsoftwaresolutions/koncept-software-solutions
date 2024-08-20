@@ -9,7 +9,7 @@ const ChooseSection = () => {
     return <>
         <FormModal open={isOpen} setOpen={setIsOpen} />
 
-        <div className="w-full py-10 px-4 flex flex-col bg-gray-100 justify-center items-center">
+        <div className="w-full py-20 px-4 flex flex-col bg-gray-100 justify-center items-center">
             <h2 className="text-2xl my-text font-semibold text-[#000]">Why Choose Arramton Infotech For Your App Development Project?</h2>
             <div className="w-full flex justify-center items-center">
                 <div className="w-1/2">

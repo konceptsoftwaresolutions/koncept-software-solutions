@@ -1,0 +1,14 @@
+.custom-dropdown .ant-select-selector {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.custom-dropdown {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.custom-dropdown.ant-select-focused {
+    border: none !important;
+    box-shadow: none !important;
+}

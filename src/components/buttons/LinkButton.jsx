@@ -6,7 +6,7 @@ const LinkButton = ({ children, href="", active = false, onClick = function(){} 
     return <>
         <a 
             href={href} 
-            className="font-poppins relative not-italic leading-normal font-medium"
+            className="font-montserrat relative not-italic leading-normal font-medium"
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             onClick={onClick}
