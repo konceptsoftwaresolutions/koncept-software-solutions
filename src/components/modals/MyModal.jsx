@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // icons
 import { RxCross2 } from "react-icons/rx";
 
-const MyModal = ({ open = true, setOpen = function(){}, children }) => {
+const MyModal = ({ open = false, setOpen = function(){}, children }) => {
     const closeEvent = (e) => {
         let id = e.target.id;
         if(id === "my-modal"){
             setOpen(false);
         }
     }
+
+    useEffect(()=> {
+        if(open){
+            window.document.body.style.overflowY = "hidden";
+        }else {
+            window.document.body.style.overflowY = "scroll";
+        }
+    }, [open]);
 
     return <>
         <div className={`fixed top-0 left-0 z-50 ${open ? "w-full h-full": "w-0 h-0"}`}>
