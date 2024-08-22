@@ -2,14 +2,14 @@ import React from "react";
 
 // pages
 import Navbar from "./common/Navbar";
-import Home from "./pages/home/Home";
 import Footer from "./common/Footer";
+import Routing from "./routes/Routing";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Home />
+      <Routing />
       <Footer />
     </>
   )
