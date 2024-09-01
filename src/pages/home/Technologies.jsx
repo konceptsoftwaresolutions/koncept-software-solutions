@@ -3,6 +3,7 @@ import React from "react";
 // icons
 import { FaReact } from "react-icons/fa6";
 import { FaNodeJs } from "react-icons/fa";
+import { FaDocker } from "react-icons/fa";
 
 const Technologies = () => {
     return <>
@@ -21,6 +22,12 @@ const Technologies = () => {
                     <FaNodeJs size={50} className="text-custom-blue" />
                     <h2 className="my-text font-semibold text-lg text-[#000]">Back-end Technologies</h2>
                     <p className="my-text text-[16px] text-[#000000]">Node, Scala, Python, JavaScript</p>
+                </div>
+
+                <div className="border border-solid cursor-pointer gap-y-4 hover:border-custom-blue border-gray-300 py-5 px-4 w-[300px] h-[250px] rounded-md bg-white flex flex-col justify-start items-start">
+                    <FaDocker size={50} className="text-custom-blue" />
+                    <h2 className="my-text font-semibold text-lg text-[#000]">Others</h2>
+                    <p className="my-text text-[16px] text-[#000000]">MongoDB, Jenkins, Docker.</p>
                 </div>
             </div>
         </div>

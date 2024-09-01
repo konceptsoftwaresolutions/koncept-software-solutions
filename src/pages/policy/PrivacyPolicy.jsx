@@ -1,13 +1,25 @@
 import React from "react";
 
 const PrivacyPolicy = () => {
+    const Heading = ({ children }) => {
+        return <h1 className="text-xl md:text-4xl">{children}</h1>
+    }
+
     const Title = ({ children }) => {
-        return <h2 className="text-lg md:text-2xl">{children}</h2>
+        return <h2 className="text-lg font-semibold md:text-xl">{children}</h2>
     }
 
     const Div = ({ children }) => {
         return <>
-            <div className="flex justify-center items-center flex-col gap-y-3">
+            <div className="flex justify-center items-start w-full flex-col gap-y-1">
+                {children}
+            </div>
+        </>
+    }
+
+    const Inline = ({ children }) => {
+        return <>
+            <div className=" inline-block text-start gap-x-2 w-full gap-y-1">
                 {children}
             </div>
         </>
@@ -15,61 +27,105 @@ const PrivacyPolicy = () => {
 
     const P = ({ children }) => {
         return <>
-            <p className="text-sm md:text-lg">{children}</p>
+            <span className="text-sm text-start font-medium md:text-lg">{children}</span>
+        </>
+    }
+
+    const PY = ({ children }) => {
+        return <>
+            <span className="text-sm text-start py-4 font-medium md:text-lg">{children}</span>
+        </>
+    }
+
+    const B = ({ children }) => {
+        return <>
+            <span className="text-sm text-start font-bold md:text-lg">{children}</span>
         </>
     }
 
     return <>
         <div className="flex justify-center items-center bg-gray-50">
             <div className="w-[95%] sm:w-[90%] flex flex-col justify-start bg-white rounded-md py-8 px-4 text-center shadow-lg border border-solid border-gray-50 my-text shadow-gray-300 items-center gap-y-10 my-8">
+                <Heading><span className="text-custom-blue">Privacy</span> Policy</Heading>
                 <Div>
-                    <Title>Privacy Policy</Title>
-                    <P> At Koncept Software Solutions, accessible from <a href="https://konceptsoftwaresolutions.com" target="_blank">https://konceptsoftwaresolutions.com</a>, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Koncept Software Solutions and how we use it. I you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us. This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in Koncept Software Solutions. This policy is not applicable to any information collected offline or via channels other than this website. Our Privacy Policy was created with the help of the Free Privacy Policy Generator</P>
+                    <P>At Koncept Software Solutions, we are committed to protecting and upholding the privacy of both our customers and website users. This is meant to give you a basic overview of how Koncept Software Solutions will use and handle your data. Please be aware that by accessing, viewing, and using Koncept Software Solutions, you agree to the terms and conditions, policies, and practices described in this privacy statement.</P>
                 </Div>
 
                 <Div>
-                    <Title>Consent</Title>
-                    <P>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</P>
+                    <P>This Privacy Statement describes what happens to any personal data you provide us or that we learn about you from when you visit our website. Also, we occasionally alter our Policy, so kindly review it frequently to ensure you are happy with any changes. This policy is effective from 1st Jan. 2023.</P>
                 </Div>
 
                 <Div>
-                    <Title>Information we collect</Title>
-                    <P>The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information. If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide. When you register for an Account, we may ask for your contact information, including items such as name, company name, address, email address, and telephone number.</P>
+                    <Title>1. What information we collect from you:</Title>
+                    <P>The following information about you may be collected and processed by us while you are on our website:</P>
+                    <P>* Name</P>
+                    <P>* Contact information including email, phone number, email address, and other appropriate information.</P>
+                    <P>* Cookies</P>
                 </Div>
 
                 <Div>
-                    <Title>How we use your information</Title>
-                    <P>We use the information we collect in various ways, including to: Provide, operate, and maintain our website Improve, personalize, and expand our website Understand and analyze how you use our website Develop new products, services, features, and functionality Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the website, and for marketing and promotional purposes Send you emails Find and prevent fraud.</P>
+                    <Title>2. Purpose of collecting information:</Title>
+                    <P>The information we collect is used for the following motive:</P>
+                    <P>* to assess your goal</P>
+                    <P>* to offer the solutions</P>
+                    <P>* to enhance our services</P>
+                    <P>* to analyze subsequent interactions</P>
+                    <P>* Also, for providing information regarding payments you made.</P>
+                </Div>
+
+                <Inline>
+                    <B>NOTE:</B>
+                    <P>  When processing payments of any type, we DO NOT store any payment information, including your financial details, credit card, or bank account details.</P>
+                </Inline>
+
+                <Div>
+                    <Title>3. Payments Details:</Title>
+                    <P>* Invoices are normally sent via email, but hard copy invoices are available on request.</P>
+                    <P>* Payment is due on receipt of the invoice by the Client.</P>
                 </Div>
 
                 <Div>
-                    <Title>Log Files</Title>
-                    <P>Koncept Software Solutions follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.</P>
+                    <Title>4. How do we protect your data?</Title>
+                    <P>We protect the personal information you provide by adhering to generally accepted industry standards, both during transmission and once we receive it. Yet, there is only a partially safe way to transmit data over the Internet, via a mobile device, or to store it electronically. The security of any information you communicate to us, or to or from our online goods or services, cannot, therefore, be guaranteed or warranted by Koncept Software Solutions Infotech Pvt. Lt., despite our best efforts.</P>
                 </Div>
 
                 <Div>
-                    <Title>Advertising Partners Privacy Policies</Title>
-                    <P>You may consult this list to find the Privacy Policy for each of the advertising partners of Koncept Software Solutions. Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on Koncept Software Solutions, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit. Note that Koncept Software Solutions has no access to or control over these cookies that are used by third-party advertisers.</P>
+                    <Title>5. How do we use cookies?</Title>
+                    <P>Cookies are small files that give information about the computer a visitor is using. To help us improve our website, we might use cookies to collect information about your computer. We may also get data about how people generally use the Internet by using the cookie feature. As previously stated, your personal information will not be revealed by the data we save. It's merely statistical information. Also, this information in no way identifies any personal information.</P>
+                    <PY>Apart from the information you choose to share with us, a cookie in no way provides us access to your computer or any other personal information about you. You have the option to accept or reject cookies. Most web browsers automatically allow cookies, however, you can usually change your browser option to deny cookies if you prefer. This can restrict you from using the website to its best potential.</PY>
                 </Div>
 
                 <Div>
-                    <Title>Third Party Privacy Policies</Title>
-                    <P>Koncept Software Solutions's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options. You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites.</P>
+                    <Title>6.How we imbibed third-party links?</Title>
+                    <P> At times, we might put links to other websites on the website. You should be aware that once you utilize these links to leave our website, we no longer have any control over that other website. Since these sites are not covered by this privacy statement, we are unable to guarantee the confidentiality and privacy of any information you supply when visiting them. Be cautious and review the privacy statement that is relevant to the mentioned website.</P>
                 </Div>
 
                 <Div>
-                    <Title>CCPA Privacy Rights (Do Not Sell My Personal Information)</Title>
-                    <P>Under the CCPA, among other rights, California consumers have the right to: Request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers. Request that a business delete any personal data about the consumer that a business has collected. Request that a business that sells a consumer's personal data, not sell the consumer's personal data. If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</P>
+                    <Title>7. Acceptance of this privacy statements and terms</Title>
+                    <P>By using the Website, you express your acceptance of our Privacy Policy and consent to collecting, using, and disseminating your information in the ways described in this policy. Please refrain from using the Website if you disagree with this privacy statement.</P>
                 </Div>
 
                 <Div>
-                    <Title>GDPR Data Protection Rights</Title>
-                    <P>We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following: The right to access You have the right to request copies of your personal data. We may charge you a small fee for this service. The right to rectification You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete. The right to erasure You have the right to request that we erase your personal data, under certain conditions. The right to restrict processing You have the right to request that we restrict the processing of your personal data, under certain conditions. The right to object to processing You have the right to object to our processing of your personal data, under certain conditions. The right to data portability You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions. If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</P>
+                    <Title>8. Any Change Control Process</Title>
+                    <P>As part of our project management process, we include a change control process. This will come into effect if your needs change or you find you need additional features after a website scope document has been signed off or we have moved on to the design phase of your project.</P>
+                    <PY>We ask you to fill in a simple form or share via email and we assess whether the change is possible at the stage it has been requested, if it can be included as part of the website costs, or whether it will incur an extra cost. This helps to keep the project on track and within budget.</PY>
                 </Div>
 
                 <Div>
-                    <Title>Children's Information</Title>
-                    <P>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity. Koncept Software Solutions does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</P>
+                    <Title>9. Termination</Title>
+                    <P>Termination of services by the Client must be requested in a written notice and will be effective on receipt of such notice. Email or telephone requests for termination of services will not be honored until and unless confirmed in writing. The Client will be invoiced for work completed (including any expenses incurred).</P>
+                </Div>
+
+                <Div>
+                    <Title>10. Cancellation fee</Title>
+                    <P>A cancellation fee may be charged if the Customer cancels the Service before completion. The fee will be equal to the amount of work completed at the point of cancellation.</P>
+                    <P>A non-payment of cancellation fee and/or over-due amount will result in legal action upon necessity.</P>
+                </Div>
+
+                <Div>
+                    <Title>11. Statutory legal information</Title>
+                    <P>Koncept Software Solutions is the Registered Name of Koncept Software Solutions Pvt. Ltd., a website and application development and digital marketing company situated in Pitampura, New Delhi at the address Plot- No 18, First Floor, Vaishali, Pitam Pura, New Delhi - 110034.</P>
+                    <PY>All the information submitted by you on the website such as name, email address, and contact details won’t be sold or shared with any third party. Only the sales team and the mobile app development team use this information to contact you or send you updates about our business and projects. Sending us an email at <a target="_blank" href="https://konceptsoftwaresolutions.com">support@konceptsoftwaresolutions.com</a> will allow you to choose not to receive our communications.</PY>
                 </Div>
             </div>
         </div>

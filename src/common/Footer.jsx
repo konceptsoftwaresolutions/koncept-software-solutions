@@ -28,7 +28,7 @@ const Footer = () => {
 
                 <div className="flex justify-center flex-col gap-y-3 sm:flex-row gap-x-4 items-center">
                     <AnimationButton onClick={() => path.navigate("/privacy-policy")}>Privacy Policy</AnimationButton>
-                    <AnimationButton onClick={() => path.navigate("/tearms-and-condition")}>Terms and Condition</AnimationButton>
+                    <AnimationButton onClick={() => path.navigate("/terms-and-conditions")}>Terms and Conditions</AnimationButton>
                 </div>
             </div>
             <div className="w-full flex justify-center items-center bg-gray-900 py-4 text-white">

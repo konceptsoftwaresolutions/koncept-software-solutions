@@ -50,7 +50,7 @@ const MyForm = () => {
                 </MyButton>    
             </div>
 
-            <p className="my-text text-[18px] font-medium">
+            <p className="my-text text-[18px] text-center font-medium">
                 <span className="text-custom-blue">
                     Note: 
                 </span>
