@@ -104,7 +104,7 @@ const Introduction = () => {
             <FormModal open={isOpen} setOpen={setIsOpen} />
             <div id="home" className="w-full overflow-hidden bg-gray-900 relative h-[90vh]">
                 {/* Background Earth Animation */}
-                <div className="absolute inset-0 -left-[500px] md:-left-[100px] lg:left-20 -top-20 md:-top-[100px]">
+                <div className="absolute inset-0 -left-[200%] md:-left-[65%] lg:-left-[35%] -top-20 md:-top-[100px]">
                     <EarthAnimation width={1800} height={1000} />
                 </div>
                 {/* Main Content */}
