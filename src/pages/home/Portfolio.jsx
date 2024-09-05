@@ -25,17 +25,17 @@ const Portfolio = () => {
 
     const data = [
         {
-            url: "https://firebasestorage.googleapis.com/v0/b/backendtest-f4147.appspot.com/o/konceptlawCrm.png?alt=media&token=c72a14e3-854d-485d-ae99-90da380d08fe",
+            url: "https://firebasestorage.googleapis.com/v0/b/backendtest-f4147.appspot.com/o/konceptlawCrm.png?alt=media&token=0d5aa546-100c-4e3a-bc86-ea939f18cb1d",
             title: "Koncept Law",
             text: "Every mobile app we create, whether for iOS or Android, is a stepping stone to our collective success. That's why we're your one-stop shop for custom mobile app development on both leading platforms."
         },
         {
-            url: "https://firebasestorage.googleapis.com/v0/b/backendtest-f4147.appspot.com/o/legalpaperCrm.png?alt=media&token=12ba5191-186b-4412-b1ec-1cb4a69b6b5f",
+            url: "https://firebasestorage.googleapis.com/v0/b/backendtest-f4147.appspot.com/o/legalpaperCrm.png?alt=media&token=3c9c6fc6-fff3-4aff-9cf4-b8f373911606",
             title: "Legal Papers",
             text: "Every mobile app we create, whether for iOS or Android, is a stepping stone to our collective success. That's why we're your one-stop shop for custom mobile app development on both leading platforms."
         },
         {
-            url: "https://firebasestorage.googleapis.com/v0/b/backendtest-f4147.appspot.com/o/sanskritiCrm.png?alt=media&token=084d7c46-e697-4a4c-ac8c-6d74287bd970",
+            url: "https://firebasestorage.googleapis.com/v0/b/backendtest-f4147.appspot.com/o/sanscritiCrm.png?alt=media&token=af82a9ce-11bc-48f0-8df3-7dcb21fc6f0f",
             title: "Sanscriti",
             text: "Every mobile app we create, whether for iOS or Android, is a stepping stone to our collective success. That's why we're your one-stop shop for custom mobile app development on both leading platforms."
         }
