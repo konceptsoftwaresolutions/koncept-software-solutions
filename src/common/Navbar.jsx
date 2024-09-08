@@ -61,11 +61,11 @@ const Navbar = () => {
         </Drawer>
         <nav className="flex justify-center sticky z-30 top-0 left-0 bg-white border-b border-solid border-b-gray-100 shadow-sm shadow-gray-200 items-center w-full">
             <div className="justify-center hidden lg:flex w-[25%] items-center">
-                <div className="flex flex-col justify-center mt-5 relative select-none items-start">
-                    {/* <img src="/vite.svg" alt="logo" /> */}
+                {/* <div className="flex flex-col justify-center mt-5 relative select-none items-start">
                     <h2 className="font-pixelify not-italic leading-normal absolute -top-[29px] -left-[25px] select-none font-medium text-custom-blue text-[28px]">Koncept</h2>
                     <h2 className="font-pixelify not-italic leading-normal font-medium select-none text-[16px]">Software Solutions</h2>
-                </div>
+                </div> */}
+                <img src="/logo.png" alt="logo" className="w-[220px]" />
             </div>
             <div className="w-full flex flex-col justify-start items-start">
                 <div className="w-full bg-custom-blue h-[70px] sm:h-[60px] md:h-[35px] flex justify-start items-center relative py-1 px-2 sm:px-6 text-white">

@@ -7,17 +7,20 @@ export default {
   theme: {
     extend: {
       backgroundColor: {
-        'custom-blue': '#0866ff',  // Custom blue color
+        // 'custom-blue': '#0866ff',  // Custom blue color
+        'custom-blue': '#3498db'
       },
       fontFamily: {
         'poppins': ['Poppins'],
         'pixelify': ['Pixelify'],
       },
       colors: {
-        'custom-blue': '#0866ff',  // Custom blue color
+        // 'custom-blue': '#0866ff',  // Custom blue color
+        'custom-blue': '#3498db'
       },
       borderColor: {
-        'custom-blue': '#0866ff',  // Custom blue color
+        // 'custom-blue': '#0866ff',  // Custom blue color
+        'custom-blue': '#3498db'
       }
     },
   },
