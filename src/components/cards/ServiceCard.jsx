@@ -7,7 +7,7 @@ const ServiceCard = ({ icon, title="", text = "" }) => {
     const [hover, setHover] = useState(false);
 
     return <>
-        <div className={`flex justify-start flex-col items-start border py-2 px-4 border-solid border-gray-300 hover:border-custom-blue rounded-lg w-[300px] transition-all ${hover ? "h-[500px]": "h-[350px]"}`}
+        <div className={`flex justify-start flex-col items-start border py-2 px-4 border-solid border-gray-300 hover:border-custom-blue rounded-lg w-[300px] transition-all duration-500 ${hover ? "h-[500px]": "h-[350px]"}`}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
         >

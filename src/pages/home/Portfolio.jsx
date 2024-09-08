@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import { NextArrow, PrevArrow } from "../../components/arrows/Arrows";
+import LimitText from "../../components/texts/LimitText";
 
 const Portfolio = () => {
     var settings = {
@@ -22,6 +23,8 @@ const Portfolio = () => {
             }
         ]
     };
+
+    const [hover, setHover] = useState(false);
 
     const data = [
         {
@@ -48,10 +51,18 @@ const Portfolio = () => {
                 <Slider {...settings} className="py-6">
                     {
                         data.map(({ text = "", title = "", url = "" }, index) => (
-                            <div key={index} className="flex justify-start items-start flex-col gap-y-3">
-                                <img src={url} alt="image" className="w-full h-[450px]" />
-                                <h2 className="my-text text-xl my-2">{title}</h2>
-                                <p className="my-text text-[#000]">{text}</p>
+                            <div key={index}>
+                                <div className="flex justify-start items-start flex-col gap-y-3"
+                                    onMouseEnter={() => setHover(true)}
+                                    onMouseLeave={() => setHover(false)}
+                                >
+                                    <img src={url} alt="image" className="w-full h-[450px] rounded-md" />
+                                    <h2 className="my-text text-xl my-2">{title}</h2>
+                                    {/* <p className={`my-text text-[#000] mx-2 ${hover ? "h-[500px]" : "h-[350px]"}`}>{text}</p> */}
+                                    <p className={`my-text transition-all duration-500 text-[#000]`}>
+                                        <LimitText limit={hover ? text.length : 150} text={text} />
+                                    </p>
+                                </div>
                             </div>
                         ))
                     }

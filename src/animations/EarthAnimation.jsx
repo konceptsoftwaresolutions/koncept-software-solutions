@@ -8,14 +8,16 @@ import myEarth from "../assets/myEarth.json";
 
 const EarthAnimation = ({
     width=1000,
-    height=800
+    height=800,
+    className="",
 }) => {
     return <>
         <Lottie
             animationData={myEarth}
             loop={true} // Set to true to loop the animation
             autoplay={true} // Set to true to autoplay the animation
-            style={{ width: width, height: height, margin: 0, padding: 0 }} // Set width and height as needed
+            style={{ width: width, height: height, margin: 0, padding: 0 }} // Set width and height as neede1
+            className={className}
         />
     </>
 }

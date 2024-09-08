@@ -21,7 +21,7 @@ const Technologies = () => {
                 <div className="border border-solid cursor-pointer gap-y-4 hover:border-custom-blue border-gray-300 py-5 px-4 w-[300px] h-[250px] rounded-md bg-white flex flex-col justify-start items-start">
                     <FaNodeJs size={50} className="text-custom-blue" />
                     <h2 className="my-text font-semibold text-lg text-[#000]">Back-end Technologies</h2>
-                    <p className="my-text text-[16px] text-[#000000]">Node, Scala, Python, JavaScript</p>
+                    <p className="my-text text-[16px] text-[#000000]">JavaScript, Python, NodeJs</p>
                 </div>
 
                 <div className="border border-solid cursor-pointer gap-y-4 hover:border-custom-blue border-gray-300 py-5 px-4 w-[300px] h-[250px] rounded-md bg-white flex flex-col justify-start items-start">
