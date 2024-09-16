@@ -104,8 +104,8 @@ const Introduction = () => {
             <FormModal open={isOpen} setOpen={setIsOpen} />
             <div id="home" className="w-full overflow-hidden bg-gray-900 relative h-[90vh]">
                 {/* Background Earth Animation */}
-                <div className="absolute inset-0 -left-[60%] lg:-left-[30%] -top-20 md:-top-[100px]">
-                    <EarthAnimation width={1500} height={800} />
+                <div className="absolute inset-0 -left-[160%] sm:-left-[80%] lg:-left-[70%] xl:-left-[45%] -top-20 md:-top-[120px]">
+                    <EarthAnimation width={1800} height={1000} />
                 </div>
                 {/* Main Content */}
                 <div id="contactus" className="absolute top-0 flex justify-center items-center left-0 backdrop-brightness-[0.7] h-full w-full">

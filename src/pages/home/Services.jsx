@@ -28,7 +28,7 @@ const Services = () => {
                     <Slider {...sliderSettings}>
                         <div>
                             <div className="flex justify-center items-center w-full">
-                                <ServiceCard icon={<CgBrowser size={80} />} title="Web Design & Development" text={"At Arramton Infotech, we understand the power of mobile apps to transform your business. Whether you envision a sleek and intuitive e-commerce platform, an engaging game that keeps users hooked, or a productivity tool that streamlines workflows, our team of expert iOS and Android app developers is here to bring your vision to life."} />
+                                <ServiceCard icon={<CgBrowser size={80} />} title="Web Design & Development" text={"At Koncept Software Solutions Infotech, we understand the power of mobile apps to transform your business. Whether you envision a sleek and intuitive e-commerce platform, an engaging game that keeps users hooked, or a productivity tool that streamlines workflows, our team of expert iOS and Android app developers is here to bring your vision to life."} />
                             </div>
                         </div>
 
@@ -40,7 +40,7 @@ const Services = () => {
 
                         <div>
                             <div className="flex justify-center items-center w-full">
-                                <ServiceCard icon={<FaWhatsappSquare size={70} />} title="Whatsapp Business Integration" text={"At Arramton Infotech, we understand the power of mobile apps to transform your business. Whether you envision a sleek and intuitive e-commerce platform, an engaging game that keeps users hooked, or a productivity tool that streamlines workflows, our team of expert iOS and Android app developers is here to bring your vision to life."} />
+                                <ServiceCard icon={<FaWhatsappSquare size={70} />} title="Whatsapp Business Integration" text={"At Koncept Software Solutions Infotech, we understand the power of mobile apps to transform your business. Whether you envision a sleek and intuitive e-commerce platform, an engaging game that keeps users hooked, or a productivity tool that streamlines workflows, our team of expert iOS and Android app developers is here to bring your vision to life."} />
                             </div>
                         </div>
                     </Slider>
