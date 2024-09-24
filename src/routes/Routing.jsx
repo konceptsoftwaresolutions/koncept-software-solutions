@@ -5,6 +5,9 @@ import { Route, Routes } from "react-router-dom";
 const Home = lazy(() => import("../pages/home/Home"));
 const PrivacyPolicy = lazy(() => import("../pages/policy/PrivacyPolicy"));
 const TermsCondition = lazy(() => import("../pages/policy/TermsCondition"));
+const Ecommerce = lazy(() => import("../pages/ecommerce/Ecommerce"));
+const Delivery = lazy(() => import("../pages/delivery/Delivery"));
+const Grocery = lazy(() => import("../pages/grocery/Grocery"));
 
 const Routing = () => {
     return <>
@@ -12,6 +15,9 @@ const Routing = () => {
             <Route path="/" element={<Home />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-and-conditions" element={<TermsCondition />} />
+            <Route path="/ecommerce-app-development" element={<Ecommerce />} />
+            <Route path="/grocery-app-development" element={<Grocery/>} />
+            <Route path="/food-delivery-app" element={<Delivery />} />
         </Routes>
     </>
 }

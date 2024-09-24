@@ -9,6 +9,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import LinkButton from "../components/buttons/LinkButton";
 import { Drawer } from "antd";
 import { useLocation } from "react-router-dom";
+import MenuButton from "../components/buttons/MenuButton";
 
 const Navbar = () => {
     const [isActive, setIsActive] = useState("home");
@@ -16,14 +17,20 @@ const Navbar = () => {
     const location = useLocation();
 
     const handleClose = () => setIsOpen(!isOpen);
-    
-    useEffect(()=> {
-        if(location){
+
+    const industriesMenu = [
+        { label: "Food Delivery", value: "food-delivery-app" },
+        { label: "Ecommerce", value: "ecommerce-app-development" },
+        { label: "Grocery", value: "grocery-app-development" },
+    ]
+
+    useEffect(() => {
+        if (location) {
             let pathname = location.hash;
-            if(pathname.match("#")){
+            if (pathname.match("#")) {
                 let getLink = pathname.split("#")[1];
                 setIsActive(getLink);
-            }else {
+            } else {
                 setIsActive("home");
             }
             setIsOpen(false);
@@ -105,6 +112,10 @@ const Navbar = () => {
                     <LinkButton href="#contactus" active={isActive === "contactus"} onClick={() => setIsActive("contact")}>
                         Contact Us
                     </LinkButton>
+
+                    <MenuButton menu={industriesMenu}>
+                        Industries
+                    </MenuButton>
                 </div>
 
                 <div className="w-auto py-4 flex md:hidden gap-x-10 justify-start ml-10 lg:ml-0 items-center">
