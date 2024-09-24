@@ -2,6 +2,7 @@ import React from "react";
 import Introduction from "./introduction";
 import Company from "./Company";
 import Functions from "./Functions";
+import Flexible from "./Flexible";
 
 const Ecommerce = () => {
     return <>
@@ -9,6 +10,7 @@ const Ecommerce = () => {
             <Introduction />
             <Company />
             <Functions />
+            <Flexible />
         </div>
     </>
 }
