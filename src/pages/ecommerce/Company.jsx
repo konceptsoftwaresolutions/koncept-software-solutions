@@ -4,7 +4,7 @@ const Company = () => {
     return <>
         <div className="py-10 px-16 flex justify-between items-center">
             <div className="flex flex-col w-1/2 justify-start gap-y-6 items-start">
-                <h2 className="font-montserrat not-italic leading-normal text-[35px]">Ecommerce App Development Company</h2>
+                <h2 className="font-montserrat not-italic leading-normal font-medium text-gradient text-[35px]">Ecommerce App Development Company</h2>
                 <p className="font-montserrat not-italic leading-normal">
                     As everything has become digital in today’s virtual world, everything comes at our fingertips seamlessly. Thus, creating a mobile app for your enterprise is a fruitful and cost-effective way to drive more revenue and sales.
                 </p>

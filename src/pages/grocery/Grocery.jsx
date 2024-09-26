@@ -1,8 +1,17 @@
 import React from "react";
+import Introduction from "./Introduction";
+import Application from "./Application";
+import Features from "./Features";
+import OurGrocery from "./OurGrocery";
 
 const Grocery = () => {
     return <>
-        <h2>grocery page!</h2>
+        <div className="w-full">
+            <Introduction />
+            <Application />
+            <Features />
+            <OurGrocery />
+        </div>
     </>
 }
 

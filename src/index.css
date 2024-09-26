@@ -75,3 +75,33 @@ html {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
+
+/* background */
+.ecommerce-bg-image {
+    background: url("./assets/waves/wave1.svg") no-repeat center center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-position: top center;
+}
+
+.ecommerce-bg-image-hover:hover {
+    background: url("./assets/waves/wave2.svg") no-repeat center center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-position: top center;
+}
+
+.wave2 {
+    background: url("./assets/waves/wave2.svg") no-repeat;
+    background-size: cover; /* Make the image cover the element */
+    background-position: -25rem 35px; /* Horizontally centered and 20px from the top */
+}
+
+@media (max-width: 768px) {
+    .ecommerce-bg-image-hover {
+        background: url("./assets/waves/wave2.svg") no-repeat center center;
+        background-size: cover;
+        /* background-attachment: fixed; */
+        background-position: top center;
+    }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import Introduction from "./introduction";
+import Introduction from "./Introduction";
 import Company from "./Company";
 import Functions from "./Functions";
 import Flexible from "./Flexible";

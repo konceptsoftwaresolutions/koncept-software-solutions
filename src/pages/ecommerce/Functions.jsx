@@ -16,6 +16,7 @@ import { FaAmazonPay } from "react-icons/fa";
 import { TfiLayoutSlider } from "react-icons/tfi";
 import { FaBuysellads } from "react-icons/fa6";
 import { IoLogoGameControllerA } from "react-icons/io";
+import Slider from "react-slick";
 
 const Functions = () => {
     const data = [
@@ -49,7 +50,7 @@ const Functions = () => {
         },
         {
             icon: <FaRegListAlt size={35} />,
-            text:"Orders Control.",
+            text: "Orders Control.",
         },
         {
             icon: <FaAmazonPay size={35} />,
@@ -61,23 +62,44 @@ const Functions = () => {
         },
         {
             icon: <FaBuysellads size={35} />,
-            text:"Cut Price and Advertising Management."
+            text: "Cut Price and Advertising Management."
         },
         {
             icon: <IoLogoGameControllerA size={35} />,
             text: "Charge Control."
         }
     ]
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true, // Enable auto-play
+        autoplaySpeed: 2000, // Set the speed (in milliseconds) at which slides change
+        arrows: false, // Disable navigation arrows
+    };
+
     return <>
         <div className="py-10 px-16 flex flex-col bg-gray-50 border-b-2 gap-y-5 border-gray-200 justify-start items-start">
-            <h2 className="font-montserrat not-italic leading-normal text-[35px]">Ecommerce App Development Company</h2>
+            <h2 className="font-montserrat not-italic leading-normal text-[35px] font-medium text-gradient">Ecommerce App Development Company</h2>
             <p className="font-montserrat not-italic leading-normal text-[18px]">There are some functions of single vendor ecommerce app development. Let’s look at some of them:</p>
-            <div className="grid grid-cols-3 gap-x-5 gap-y-6">
+            <div className="grid-cols-3 hidden md:grid gap-x-5 gap-y-6">
                 {
                     data.map(({ icon, text }, index) => {
                         return <EcommerceCard icon={icon} text={text} key={index} />
                     })
                 }
+            </div>
+            <div className="w-full md:hidden gap-x-2 my-3">
+                <Slider {...settings}>
+                    {
+                        data.map(({ icon, text }, index) => {
+                            return <div className="w-full"><EcommerceCard icon={icon} text={text} key={index} /></div>
+                        })
+                    }
+                </Slider>
             </div>
         </div>
     </>

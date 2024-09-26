@@ -1,8 +1,17 @@
 import React from "react";
+import Introduction from "./Introduction";
+import GenX from "./GenX";
+import HowDoes from "./HowDoes";
+import Flexible from "./Flexible";
 
 const Delivery = () => {
     return <>
-        <h2>delivery page!</h2>
+        <div className="w-full">
+            <Introduction />
+            <GenX />
+            <HowDoes />
+            <Flexible />
+        </div>
     </>
 }
 
