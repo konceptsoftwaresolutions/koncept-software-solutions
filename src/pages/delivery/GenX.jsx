@@ -1,12 +1,21 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const GenX = () => {
     const Card = ({ title = "", desc = "" }) => {
         return <div className="flex h-[100px] justify-start w-full items-start gap-x-10">
             <div className="h-full w-2 bg-custom-blue"></div>
-            <div className="flex justify-start items-start flex-col gap-y-2">
-                <h2 className="font-montserrat not-italic leading-normal font-medium text-[25px]">{title}</h2>
-                <p className="font-montserrat not-italic leading-normal">{desc}</p>
+            <div className="overflow-hidden">
+                <motion.div
+                    initial={{ x: -200, opacity: 0 }} // Start off-screen and transparent
+                    whileInView={{ x: 0, opacity: 1 }} // Animate to original position and fully visible when in view
+                    transition={{ duration: 0.5 }} // Duration of the animation
+                    viewport={{ once: true }} // Only animate once when in view
+                    className="flex justify-start items-start flex-col gap-y-2"
+                >
+                    <h2 className="font-montserrat not-italic leading-normal font-medium text-[25px]">{title}</h2>
+                    <p className="font-montserrat not-italic leading-normal">{desc}</p>
+                </motion.div>
             </div>
         </div>
     }
@@ -44,7 +53,7 @@ const GenX = () => {
             <p className="font-montserrat not-italic leading-normal text-[18px]">Offer tailored and unique food ordering app experience for every order.</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 my-8 gap-x-10 gap-y-12">
-                { data.map((item, index) => (<Card key={index} {...item} />)) }
+                {data.map((item, index) => (<Card key={index} {...item} />))}
             </div>
         </div>
     </>

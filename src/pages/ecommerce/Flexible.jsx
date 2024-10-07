@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 // icons
 import { ImSearch } from "react-icons/im";
@@ -17,19 +18,26 @@ const Flexible = () => {
         const [isHover, setIsHover] = useState(false);
 
         return <>
-            <div
-                className="flex justify-center gap-x-6 items-center"
-                onMouseEnter={() => setIsHover(true)}
-                onMouseLeave={() => setIsHover(false)}
+            <motion.div
+                initial={{ x: -100, opacity: 0 }} // Start off-screen and transparent
+                whileInView={{ x: 0, opacity: 1 }} // Animate to original position and fully visible when in view
+                transition={{ duration: 0.3 }} // Duration of the animation
+                viewport={{ once: true }} // Only animate once when in view
             >
-                <div className="flex justify-center items-center w-[25%] text-custom-blue">
-                    {icon}
+                <div
+                    className="flex justify-center gap-x-6 items-center"
+                    onMouseEnter={() => setIsHover(true)}
+                    onMouseLeave={() => setIsHover(false)}
+                >
+                    <div className="flex justify-center items-center w-[25%] text-custom-blue">
+                        {icon}
+                    </div>
+                    <div className="flex flex-col justify-start h-full gap-y-4 w-[75%] items-start">
+                        <h2 className="font-montserrat not-italic leading-normal font-medium text-[25px]">{title}</h2>
+                        <LimitText className="font-montserrat not-italic leading-normal text-[16px]" limit={!isHover ? 160 : text.length} text={text} />
+                    </div>
                 </div>
-                <div className="flex flex-col justify-start h-full gap-y-4 w-[75%] items-start">
-                    <h2 className="font-montserrat not-italic leading-normal font-medium text-[25px]">{title}</h2>
-                    <LimitText className="font-montserrat not-italic leading-normal text-[16px]" limit={!isHover ? 160: text.length} text={text} />
-                </div>
-            </div>
+            </motion.div>
         </>
     }
 

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 // components
 import AnimationButton from "../../components/buttons/AnimationButton";
 import FormModal from "../../components/modals/FormModal";
+import AnimatedCount from "../../animations/AnimatedCount";
 
 const ChooseSection = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,17 +24,26 @@ const ChooseSection = () => {
             <div className="flex w-full justify-center my-8 items-center">
                 <div className="w-[90%] py-5 border border-solid rounded-md grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-4 sm:gap-y-3 border-blue-300">
                     <div className="flex flex-col justify-center w-full items-center">
-                        <span className="my-text text-4xl text-gradient">20+</span>
+                        <span className="my-text text-4xl text-gradient flex justify-center items-center">
+                            <AnimatedCount targetNumber={20} key={"developers"} duration={1} className="my-text text-4xl text-gradient" />+
+                            {/* 20+ */}
+                        </span>
                         <h2 className="my-text font-medium text-[#000] text-[14px] md:text-lg">Developers</h2>
                     </div>
 
                     <div className="flex flex-col justify-center w-full items-center">
-                        <span className="my-text text-4xl  text-gradient">5+</span>
+                        <span className="my-text text-4xl  text-gradient flex justify-center items-center">
+                            <AnimatedCount targetNumber={5} key={"developers"} duration={1} className="my-text text-4xl text-gradient" />+
+                            {/* 5+ */}
+                        </span>
                         <h2 className="my-text font-medium text-[#000] text-[14px] md:text-lg">Years of Experience</h2>
                     </div>
 
                     <div className="flex flex-col justify-center w-full items-center">
-                        <span className="my-text text-4xl  text-gradient">100%</span>
+                        <span className="my-text text-4xl  text-gradient flex justify-center items-center">
+                            <AnimatedCount targetNumber={100} key={"developers"} duration={1} className="my-text text-4xl text-gradient" />%
+                            {/* 100% */}
+                        </span>
                         <h2 className="my-text font-medium text-[#000] text-[14px] md:text-lg">Client Satisfaction</h2>
                     </div>
                 </div>

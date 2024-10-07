@@ -14,11 +14,36 @@ const usePath = () => {
     const history = window.history;
     const system = window.navigator;
     const href = window.location.href;
+    const pathHash = sessionStorage.getItem("use-path-hash");
 
     useEffect(() => {
         // Scroll to top whenever navigation happens
-        window.scrollTo(0, 0);
-    }, [navigate]);
+        // const hash = window.location.hash;
+        if (pathHash && pathHash !== "") {
+            // const element = document.getElementById(hash.substring(1)); // Remove the '#' and get the id
+            const element = document.getElementById(pathHash); // Remove the '#' and get the id
+            // if (element) {
+            //     element.scrollIntoView({ behavior: 'smooth', block: "start", inline: "start" }); // Smooth scroll to the section
+            // }
+            if (element) {
+                const elementPosition = element.getBoundingClientRect().top + window.scrollY; // Get the absolute position
+                const offsetPosition = elementPosition - 100; // Adjust for the offset (e.g., height of fixed header)
+        
+                // Smoothly scroll to the adjusted position
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth' // Smooth scroll effect
+                });
+            }
+        } else {
+            window.scrollTo(0, 0);
+        }
+    }, [navigate, pathHash]);
+
+    const setHash = (hash = "") => {
+        sessionStorage.setItem("use-path-hash", hash);
+        // navigate(url);
+    }
 
     const changeEndPoint = (path = "") => {
         if (path !== "") {
@@ -228,11 +253,11 @@ const usePath = () => {
         // console.log(pathname);
         sessionStorage.setItem(pathname, JSON.stringify(data));
     }
-    
+
     const removeState = (name = "") => {
-        if(name && name !== ""){
+        if (name && name !== "") {
             sessionStorage.removeItem(name);
-        }else {
+        } else {
             sessionStorage.removeItem(pathname);
         }
     }
@@ -279,6 +304,8 @@ const usePath = () => {
         removeState,
         clearState,
         reload,
+        setHash,
+        hash: pathHash,
     }
 }
 

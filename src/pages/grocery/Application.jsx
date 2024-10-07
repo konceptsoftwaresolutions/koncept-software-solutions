@@ -1,5 +1,6 @@
 import React from "react";
 import LimitText from "../../components/texts/LimitText";
+import { motion } from "framer-motion";
 
 // icons
 import { SiHomeassistantcommunitystore } from "react-icons/si";
@@ -20,10 +21,22 @@ const Application = () => {
                 <div className="flex justify-center items-center w-[25%] text-custom-blue">
                     {icon}
                 </div>
-                <div className="flex flex-col justify-start h-full gap-y-4 w-[75%] items-start">
+                <div className="overflow-hidden w-[75%]">
+                    <motion.div
+                        initial={{ y: 100, opacity: 0 }} // Start off-screen and transparent
+                        whileInView={{ y: 0, opacity: 1 }} // Animate to original position and fully visible when in view
+                        transition={{ duration: 0.3 }} // Duration of the animation
+                        viewport={{ once: true }} // Only animate once when in view
+                        className="flex flex-col justify-start h-full gap-y-4 w-full items-start"
+                    >
+                        <h2 className="font-montserrat not-italic leading-normal font-medium text-[25px]">{title}</h2>
+                        <LimitText className="font-montserrat not-italic leading-normal text-[16px]" limit={text.length} text={text} />
+                    </motion.div>
+                </div>
+                {/* <div className="flex flex-col justify-start h-full gap-y-4 w-[75%] items-start">
                     <h2 className="font-montserrat not-italic leading-normal font-medium text-[25px]">{title}</h2>
                     <LimitText className="font-montserrat not-italic leading-normal text-[16px]" limit={text.length} text={text} />
-                </div>
+                </div> */}
             </div>
         </>
     }
