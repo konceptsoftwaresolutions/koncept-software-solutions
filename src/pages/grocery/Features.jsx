@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Features = () => {
     const Card = ({ title = "", desc = "" }) => {
-        return <div className="flex h-[100px] justify-start w-full items-start gap-x-10">
+        return <div className="flex h-auto xl:h-[120px] justify-start w-full items-start gap-x-10">
             <div className="h-full w-2 bg-custom-blue"></div>
             <div className="overflow-hidden">
                 <motion.div

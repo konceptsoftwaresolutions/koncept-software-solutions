@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import MyForm from "../../components/forms/MyForm";
 
 const Introduction = () => {
     return <>
@@ -30,6 +31,15 @@ const Introduction = () => {
                 </motion.div>
             </div>
             <div className="hidden lg:flex flex-col w-1/2 justify-center items-end">
+                <motion.div
+                    initial={{ y: 200, opacity: 0 }} // Start off-screen and transparent
+                    animate={{ y: 0, opacity: 1 }} // Animate to original position and fully visible when in view
+                    transition={{ duration: 0.5 }} // Duration of the animation
+                    // viewport={{ once: true }} // Only animate once when in view
+                    className="w-full flex justify-center items-center"
+                >
+                    <MyForm />
+                </motion.div>
             </div>
         </div>
     </>
