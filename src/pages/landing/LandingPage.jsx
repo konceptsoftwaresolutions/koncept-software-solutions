@@ -31,7 +31,7 @@ const LandingPage = () => {
             <title>Landing Page - koncept software solutions</title>
         </Helmet>
 
-        <div className="flex flex-col xl:flex-row justify-center bg-black items-center w-full gap-x-4 p-5">
+        <div className="flex flex-col xl:flex-row justify-center bg-black h-auto xl:h-screen items-center w-full gap-x-4 p-5">
             <div className="w-full xl:w-1/2 flex flex-col justify-center items-center">
                 <div className="text-white text-xl sm:text-2xl md:text-3xl flex flex-col w-full sm:w-[95%] xl:w-full justify-start items-center lg:text-4xl font-orbitron font-semibold leading-normal not-italic">
                     <h2 className="w-full text-start">Welcome to</h2>
@@ -54,7 +54,7 @@ const LandingPage = () => {
                 <div className="rounded-lg hidden sm:block overflow-hidden">
                     <MyAnimation
                         animationData={landingAnimation}
-                        width={600}
+                        width={545}
                         height={410}
                     />
                 </div>
