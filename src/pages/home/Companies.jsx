@@ -75,7 +75,7 @@ const Companies = () => {
                     </div>
                 </div>
 
-                <div className="flex justify-center items-center w-full h-full">
+                {/* <div className="flex justify-center items-center w-full h-full">
                     <div className="w-full flex justify-center items-center">
                         <Div>
                             <img
@@ -85,7 +85,7 @@ const Companies = () => {
                             />
                         </Div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="flex justify-center items-center w-full h-full">
                     <div className="w-full flex justify-center items-center">

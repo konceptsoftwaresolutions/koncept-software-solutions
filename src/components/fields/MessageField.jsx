@@ -8,6 +8,7 @@ const MessageField = ({
   icon,
   control,
   errors,
+  className = "",
 }) => {
   return (
     <div className="flex justify-center items-center w-full">
@@ -27,7 +28,7 @@ const MessageField = ({
               placeholder={placeholder}
               name={name}
               id={name}
-              className={`outline-none border-b h-7 border-solid border-gray-400 placeholder-gray-500 placeholder:font-montserrat placeholder:not-italic placeholder:text-[15px] placeholder:font-medium placeholder:leading-normal font-montserrat not-italic leading-normal font-medium text-[15px] py-0.5 text-[#000] focus:placeholder-custom-blue focus:border-b-custom-blue w-full ${errors?.[name] ? "border-red-500" : ""
+              className={`outline-none border-b h-7 border-solid border-gray-400 placeholder-gray-500 placeholder:font-montserrat placeholder:not-italic placeholder:text-[15px] placeholder:font-medium placeholder:leading-normal font-montserrat not-italic leading-normal font-medium text-[15px] py-0.5 text-[#000] focus:placeholder-custom-blue focus:border-b-custom-blue w-full ${className} ${errors?.[name] ? "border-red-500" : ""
                 }`}
             ></textarea>
           )}

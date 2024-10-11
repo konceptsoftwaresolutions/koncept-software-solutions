@@ -13,6 +13,8 @@ export default {
       fontFamily: {
         'poppins': ['Poppins'],
         'pixelify': ['Pixelify'],
+        'montserrat': ['Montserrat'],
+        'orbitron': ['Orbitron'],
       },
       colors: {
         // 'custom-blue': '#0866ff',  // Custom blue color

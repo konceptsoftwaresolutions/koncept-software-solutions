@@ -20,7 +20,7 @@ const Cards = ({
             viewport={{ once: true }} // Only animate once when in view
         >
             <div
-                className={`flex justify-between items-center w-[280px]  my-10 flex-col border border-solid rounded-md border-gray-300 shadow-md shadow-gray-200 py-4 px-3 font-montserrat relative font-medium transition-all  ${isHover ? "h-[400px]" : "h-[350px]"}`}
+                className={`flex justify-between items-center w-[280px]  my-10 flex-col border border-solid rounded-md border-gray-300 shadow-md shadow-gray-200 py-4 px-3 font-montserrat relative font-medium transition-all  ${isHover ? "h-auto" : "h-[350px]"}`}
                 onMouseEnter={() => setIsHover(true)}
                 onMouseLeave={() => setIsHover(false)}
             >

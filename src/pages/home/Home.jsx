@@ -16,7 +16,7 @@ const Home = () => {
     return <>
         <main className="">
             <Introduction />
-            {/* <Companies /> */}
+            <Companies />
             <Testimonial />
             <ChooseSection />
             <Services />

@@ -6,6 +6,10 @@ const { Option } = Select;
 
 import "./NumberFieldStyle.css";
 
+/**
+ * @param selectType black | white
+ * @returns 
+ */
 const NumberField = ({
   type = "text",
   placeholder = "",
@@ -13,6 +17,8 @@ const NumberField = ({
   icon,
   control,
   errors,
+  className = "",
+  selectType = "white"
 }) => {
   const [selectedCountry, setSelectedCountry] = useState('');
 
@@ -37,7 +43,7 @@ const NumberField = ({
                 label="Select Country"
                 defaultValue={"+91"}
                 onChange={e => setSelectedCountry(e)}
-                className="w-[150px] custom-dropdown"
+                className={selectType === "black" ? "w-[150px] custom-dropdown-black": "w-[150px] custom-dropdown"}
                 options={countries.map((item, index) => (
                   {
                     value: item?.code,
@@ -62,7 +68,7 @@ const NumberField = ({
                 placeholder={placeholder}
                 name={name}
                 id={name}
-                className={`outline-none border-b border-solid border-gray-400 placeholder-gray-500 placeholder:font-montserrat placeholder:not-italic placeholder:text-[15px] placeholder:font-medium placeholder:leading-normal font-montserrat not-italic leading-normal font-medium text-[15px] py-0.5 text-[#000] focus:placeholder-custom-blue focus:border-b-custom-blue w-full ${errors?.[name] ? "border-red-500" : ""
+                className={`outline-none border-b border-solid border-gray-400 placeholder-gray-500 placeholder:font-montserrat placeholder:not-italic placeholder:text-[15px] placeholder:font-medium placeholder:leading-normal font-montserrat not-italic leading-normal font-medium text-[15px] py-0.5 text-[#000] focus:placeholder-custom-blue focus:border-b-custom-blue w-full ${className} ${errors?.[name] ? "border-red-500" : ""
                   }`}
               />
             </div>

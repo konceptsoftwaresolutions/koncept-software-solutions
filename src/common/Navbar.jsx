@@ -8,7 +8,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 // components
 import LinkButton from "../components/buttons/LinkButton";
 import { Drawer } from "antd";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import MenuButton from "../components/buttons/MenuButton";
 import usePath from "../hooks/usePath";
 
@@ -37,7 +37,7 @@ const Navbar = () => {
             // }
             if (path.hash && path.hash !== "") {
                 setIsActive(path.hash);
-            }else {
+            } else {
                 setIsActive("home");
             }
             setIsOpen(false);
@@ -83,7 +83,9 @@ const Navbar = () => {
                     <h2 className="font-pixelify not-italic leading-normal absolute -top-[29px] -left-[25px] select-none font-medium text-custom-blue text-[28px]">Koncept</h2>
                     <h2 className="font-pixelify not-italic leading-normal font-medium select-none text-[16px]">Software Solutions</h2>
                 </div> */}
-                <img src="/logo.png" alt="logo" className="w-[220px]" />
+                <Link to={'/'}>
+                    <img src="/logo.png" alt="logo" className="w-[220px]" />
+                </Link>
             </div>
             <div className="w-full flex flex-col justify-start items-start">
                 <div className="w-full bg-custom-blue h-[70px] sm:h-[60px] md:h-[35px] flex justify-start items-center relative py-1 px-2 sm:px-6 text-white">
@@ -103,30 +105,34 @@ const Navbar = () => {
                         </a>
                     </div>
                 </div>
-                <div className="w-auto lg:w-full py-4 hidden md:flex gap-x-10 justify-start ml-10 lg:ml-0 items-center">
-                    <LinkButton hash="home" active={isActive === "home"} onClick={() => setIsActive("home")}>
-                        Home
-                    </LinkButton>
+                <div className={`w-auto lg:w-full ${!path.pathname.match("landing") ? "py-4": "py-7"} hidden md:flex gap-x-10 justify-start ml-10 lg:ml-0 items-center`}>
+                    {
+                        !path.pathname.match("landing") ? <>
+                            <LinkButton hash="home" active={isActive === "home"} onClick={() => setIsActive("home")}>
+                                Home
+                            </LinkButton>
 
-                    <LinkButton hash="testimonial" active={isActive === "testimonial"} onClick={() => setIsActive("testimonial")}>
-                        Testimonial
-                    </LinkButton>
+                            <LinkButton hash="testimonial" active={isActive === "testimonial"} onClick={() => setIsActive("testimonial")}>
+                                Testimonial
+                            </LinkButton>
 
-                    <LinkButton hash="about-us" active={isActive === "about-us"} onClick={() => setIsActive("about")}>
-                        About Us
-                    </LinkButton>
+                            <LinkButton hash="about-us" active={isActive === "about-us"} onClick={() => setIsActive("about")}>
+                                About Us
+                            </LinkButton>
 
-                    <LinkButton hash="portfolio" active={isActive === "portfolio"} onClick={() => setIsActive("portfolio")}>
-                        Portfolio
-                    </LinkButton>
+                            <LinkButton hash="portfolio" active={isActive === "portfolio"} onClick={() => setIsActive("portfolio")}>
+                                Portfolio
+                            </LinkButton>
 
-                    <LinkButton hash="contactus" active={isActive === "contactus"} onClick={() => setIsActive("contact")}>
-                        Contact Us
-                    </LinkButton>
+                            <LinkButton hash="contactus" active={isActive === "contactus"} onClick={() => setIsActive("contact")}>
+                                Contact Us
+                            </LinkButton>
 
-                    <MenuButton menu={industriesMenu}>
-                        Industries
-                    </MenuButton>
+                            <MenuButton menu={industriesMenu}>
+                                Industries
+                            </MenuButton>
+                        </> : null
+                    }
                 </div>
 
                 <div className="w-auto py-4 flex md:hidden gap-x-10 justify-start ml-10 lg:ml-0 items-center">

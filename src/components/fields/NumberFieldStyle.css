@@ -12,3 +12,30 @@
     border: none !important;
     box-shadow: none !important;
 }
+
+.custom-dropdown-black .ant-select-selector {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: black !important;
+    color: white !important;
+}
+
+.custom-dropdown-black .ant-select-arrow {
+    color: white !important;
+}
+
+.custom-dropdown-black.ant-select-open .ant-select-selector .ant-select-selection-item div span {
+    color: white !important;
+}
+
+.custom-dropdown-black {
+    border: none !important;
+    box-shadow: none !important;
+    color: white !important;
+}
+
+.custom-dropdown-black.ant-select-focused {
+    border: none !important;
+    box-shadow: none !important;
+    color: white !important;
+}

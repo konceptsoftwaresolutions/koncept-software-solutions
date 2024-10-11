@@ -14,15 +14,19 @@ const Testimonial = () => {
     const data = [
         {
             name: "Sarah L.",
-            text: "Working with [Your Company Name] has been a game-changer for our business. Their expertise and attention to detail helped us increase our online presence and drive more traffic to our website. We've seen a 150% increase in leads within just three months!",
+            text: "Working with Koncept Software Solutions has been a game-changer for our business. Their expertise and attention to detail helped us increase our online presence and drive more traffic to our website. We've seen a 150% increase in leads within just three months!",
         },
         {
             name: "John D.",
-            text: "I can’t express how grateful I am for the outstanding service provided by [Your Company Name]. The team is incredibly responsive and professional. They took the time to understand our needs and delivered beyond our expectations. Our project was completed on time and within budget!",
+            text: "I can’t express how grateful I am for the outstanding service provided by Koncept Software Solutions. The team is incredibly responsive and professional. They took the time to understand our needs and delivered beyond our expectations. Our project was completed on time and within budget!",
         },
         {
             name: "Emily R.",
-            text: "As a startup, we faced many challenges, but partnering with [Your Company Name] made all the difference. Their creative approach and innovative solutions helped us establish a strong brand identity. I highly recommend their services to anyone looking to grow their business!",
+            text: "As a startup, we faced many challenges, but partnering with Koncept Software Solutions made all the difference. Their creative approach and innovative solutions helped us establish a strong brand identity. I highly recommend their services to anyone looking to grow their business!",
+        },
+        {
+            name: "Rohit Sharma",
+            text: "E-Commerce Platform Development Working with Koncept Software Solutions was an exceptional experience. Their team understood our business needs and delivered a scalable e-commerce platform that significantly improved our customer experience. Their attention to detail, combined with innovative solutions, helped us achieve our business goals within a tight deadline. We look forward to continuing our collaboration."
         }
     ]
     return <>
