@@ -9,6 +9,7 @@ import LimitText from "../texts/LimitText";
 const Cards = ({
     name = "",
     text = "",
+    icon = null,
 }) => {
     const [isHover, setIsHover] = useState(false);
 
@@ -18,14 +19,16 @@ const Cards = ({
             whileInView={{ y: 0, opacity: 1 }} // Animate to original position and fully visible when in view
             transition={{ duration: 0.3 }} // Duration of the animation
             viewport={{ once: true }} // Only animate once when in view
+            className="select-none"
         >
             <div
-                className={`flex justify-between items-center w-[280px]  my-10 flex-col border border-solid rounded-md border-gray-300 shadow-md shadow-gray-200 py-4 px-3 font-montserrat relative font-medium transition-all  ${isHover ? "h-auto" : "h-[350px]"}`}
+                className={`flex justify-between select-none items-center w-[280px]  my-14 flex-col border border-solid rounded-md border-gray-300 shadow-md shadow-gray-200 py-4 px-3 font-montserrat relative font-medium transition-all  ${isHover ? "h-auto" : "h-[400px]"}`}
                 onMouseEnter={() => setIsHover(true)}
                 onMouseLeave={() => setIsHover(false)}
             >
-                <div className="rounded-full bg-blue-900 text-blue-400 z-20 flex justify-center items-center w-12 h-12 absolute -top-7 left-8">
-                    <CgQuote size={38} />
+                <div className="rounded-full overflow-hidden bg-blue-900 text-blue-400 z-20 flex justify-center items-center w-24 h-24 absolute -top-12 right-4">
+                    {/* <CgQuote size={38} /> */}
+                    <img src={icon} alt="image" />
                 </div>
                 <div className="flex justify-start gap-x-1 items-center w-full text-yellow-400 my-3">
                     {

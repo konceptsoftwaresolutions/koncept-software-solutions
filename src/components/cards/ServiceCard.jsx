@@ -14,7 +14,7 @@ const ServiceCard = ({ icon, title = "", text = "" }) => {
             transition={{ duration: 0.3 }} // Duration of the animation
             viewport={{ once: true }} // Only animate once when in view
         >
-            <div className={`flex justify-start flex-col items-start border py-2 px-4 border-solid border-gray-300 hover:border-custom-blue rounded-lg w-[300px] transition-all duration-500 ${hover ? "h-[500px]" : "h-[350px]"}`}
+            <div className={`flex justify-start flex-col items-start border py-2 px-4 border-solid border-gray-300 hover:border-custom-blue rounded-lg w-[300px] transition-all duration-500 ${hover ? "h-[560px]" : "h-[380px]"}`}
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
             >

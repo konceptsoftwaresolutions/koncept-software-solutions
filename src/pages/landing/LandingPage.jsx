@@ -37,11 +37,11 @@ const LandingPage = () => {
                     <h2 className="w-full text-start">Welcome to</h2>
                     <h2 className="w-full text-start text-custom-blue">Koncept Software Solutions</h2>
                 </div>
-                <form className="flex flex-col  gap-y-4 lg:gap-y-8 py-5 lg:py-12 w-full rounded-3xl sm:p-3 justify-center items-center">
-                    <InputField className="bg-transparent placeholder-white border-b-white" control={control} errors={errors} placeholder="Name" name="name" icon={<FaUser size={20} />} />
-                    <NumberField selectType="black" className="bg-transparent placeholder-white border-b-white" control={control} errors={errors} placeholder="Mobile No." name="mobile" icon={<IoCall size={20} />} />
-                    <InputField className="bg-transparent placeholder-white border-b-white" control={control} errors={errors} placeholder="Email" name="email" icon={<MdEmail size={20} />} />
-                    <MessageField className="bg-transparent placeholder-white border-b-white" control={control} errors={errors} placeholder="Project Details" name="details" icon={<MdMessage size={20} />} />
+                <form className="flex flex-col  gap-y-4 lg:gap-y-8 py-5 text-white lg:py-12 w-full rounded-3xl sm:p-3 justify-center items-center">
+                    <InputField className="bg-transparent placeholder-white text-white border-b-white" control={control} errors={errors} placeholder="Name" name="name" icon={<FaUser size={20} />} />
+                    <NumberField selectType="black" className="bg-transparent text-white placeholder-white border-b-white" control={control} errors={errors} placeholder="Mobile No." name="mobile" icon={<IoCall size={20} />} />
+                    <InputField className="bg-transparent placeholder-white text-white border-b-white" control={control} errors={errors} placeholder="Email" name="email" icon={<MdEmail size={20} />} />
+                    <MessageField className="bg-transparent placeholder-white text-white border-b-white" control={control} errors={errors} placeholder="Project Details" name="details" icon={<MdMessage size={20} />} />
 
                     <div className="w-full flex justify-center items-center">
                         <MyButton onClick={handleSubmit(onSubmit)}>
@@ -65,7 +65,7 @@ const LandingPage = () => {
                         height={210}
                     />
                 </div>
-                <p className="font-montserrat leading-normal not-italic font-medium text-[15px] sm:text-lg text-white">We believe in empowering businesses like yours to reach new heights.</p>
+                <p className="font-montserrat leading-normal not-italic font-medium text-[15px] sm:text-lg text-white">We believe in empowering businesses like yours to reach new heights.</p>
             </div>
         </div>
     </>
