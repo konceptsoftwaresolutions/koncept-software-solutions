@@ -18,31 +18,48 @@ import MyButton from "../buttons/MyButton";
 import { contactSchema } from "../../configs/validations";
 import MessageField from "../fields/MessageField";
 import NumberField from "../fields/NumberField";
+import useRegister from "../../hooks/useRegister";
 
 const MyForm = () => {
     const { control, formState: {errors}, handleSubmit, reset } = useForm({
         resolver: yupResolver(contactSchema),
         defaultValues: {
+            // name: "",
+            // email: "",
+            // mobile: { code: "+91", number: "" },
+            // message: "",
             name: "",
             email: "",
-            mobile: { code: "+91", number: "" },
-            message: "",
+            // mobileNo: { code: "+91", number: "" },
+            mobileNo: "",
+            projectDetails: "",
         }
     });
+    const { signup } = useRegister();
 
     const onSubmit = (data) => {
         console.log(data);
+        data = {
+            ...data,
+            mobileNo: data?.mobileNo?.number,
+        }
         if(data){
-            reset();
+            signup(data);
+            reset({
+                name: "",
+                email: "",
+                mobileNo: { code: "+91", number: "" },
+                projectDetails: "",
+            });
         }
     }
 
     return <>
         <form className="flex flex-col w-3/4 bg-white gap-y-8 py-12 border-[4px] border-solid border-custom-blue rounded-3xl p-3 justify-center items-center">
             <InputField control={control} errors={errors} placeholder="Name" name="name" icon={<FaUser size={20} />} />
-            <NumberField control={control} errors={errors} placeholder="Mobile No." name="mobile" icon={<IoCall size={20} />} />
+            <NumberField control={control} errors={errors} placeholder="Mobile No." name="mobileNo" icon={<IoCall size={20} />} />
             <InputField control={control} errors={errors} placeholder="Email" name="email" icon={<MdEmail size={20} />} />
-            <MessageField control={control} errors={errors} placeholder="Project Details" name="details" icon={<MdMessage size={20} />} />
+            <MessageField control={control} errors={errors} placeholder="Project Details" name="projectDetails" icon={<MdMessage size={20} />} />
 
             <div className="w-full flex justify-center items-center">
                 <MyButton onClick={handleSubmit(onSubmit)}>

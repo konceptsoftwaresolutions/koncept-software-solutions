@@ -12,18 +12,39 @@ import { useForm } from "react-hook-form";
 // animations
 import MyAnimation from "../../animations/MyAnimation";
 import landingAnimation from "../../assets/landingAnimation.json";
+import { contactSchema } from "../../configs/validations";
+import { yupResolver } from "@hookform/resolvers/yup";
+import useRegister from "../../hooks/useRegister";
 
 const LandingPage = () => {
-    const {
-        control,
-        formState: {
-            errors
-        },
-        handleSubmit,
-    } = useForm();
+    const { control, formState: { errors }, handleSubmit, reset } = useForm({
+        resolver: yupResolver(contactSchema),
+        defaultValues: {
+            name: "",
+            email: "",
+            // mobileNo: { code: "+91", number: "" },
+            mobileNo: "",
+            projectDetails: "",
+        }
+    });
+    const { signup } = useRegister();
 
     const onSubmit = (data) => {
-
+        // console.log(data)
+        data = {
+            ...data,
+            mobileNo: data?.mobileNo?.number,
+        }
+        if (data) {
+            signup(data);
+            reset({
+                name: "",
+                email: "",
+                mobileNo: { code: "+91", number: "" },
+                projectDetails: "",
+            });
+            // setOpen(false);
+        }
     }
 
     return <>
@@ -39,9 +60,9 @@ const LandingPage = () => {
                 </div>
                 <form className="flex flex-col  gap-y-4 lg:gap-y-8 py-5 text-white lg:py-12 w-full rounded-3xl sm:p-3 justify-center items-center">
                     <InputField className="bg-transparent placeholder-white text-white border-b-white" control={control} errors={errors} placeholder="Name" name="name" icon={<FaUser size={20} />} />
-                    <NumberField selectType="black" className="bg-transparent text-white placeholder-white border-b-white" control={control} errors={errors} placeholder="Mobile No." name="mobile" icon={<IoCall size={20} />} />
+                    <NumberField selectType="black" className="bg-transparent text-white placeholder-white border-b-white" control={control} errors={errors} placeholder="Mobile No." name="mobileNo" icon={<IoCall size={20} />} />
                     <InputField className="bg-transparent placeholder-white text-white border-b-white" control={control} errors={errors} placeholder="Email" name="email" icon={<MdEmail size={20} />} />
-                    <MessageField className="bg-transparent placeholder-white text-white border-b-white" control={control} errors={errors} placeholder="Project Details" name="details" icon={<MdMessage size={20} />} />
+                    <MessageField className="bg-transparent placeholder-white text-white border-b-white" control={control} errors={errors} placeholder="Project Details" name="projectDetails" icon={<MdMessage size={20} />} />
 
                     <div className="w-full flex justify-center items-center">
                         <MyButton onClick={handleSubmit(onSubmit)}>

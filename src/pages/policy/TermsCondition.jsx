@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const TearmsCondition = () => {
     const Heading = ({ children }) => {
@@ -50,6 +51,9 @@ const TearmsCondition = () => {
     }
 
     return <>
+        <Helmet>
+            <title>Terms and Condition - Koncept Software Solutions</title>
+        </Helmet>
         <div className="flex justify-center items-center bg-gray-50">
             <div className="w-[95%] sm:w-[90%] flex flex-col justify-start bg-white rounded-md py-8 px-4 text-center shadow-lg border border-solid border-gray-50 my-text shadow-gray-300 items-center gap-y-10 my-8">
                 <Heading><span className="text-custom-blue">Terms and</span> Conditions</Heading>

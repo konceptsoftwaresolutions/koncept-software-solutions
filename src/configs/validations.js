@@ -12,11 +12,11 @@ export const contactSchema = yup.object().shape({
     .email('Invalid email address')
     .required('Email is required'),
   
-  // mobile: yup
+  // mobileNo: yup
   //   .string()
-  //   .required('Mobile number is required')
-  //   .matches(/^\d{10}$/, 'Mobile number must be exactly 10 digits'),
-  mobile: yup.object().shape({
+  //   .required('Mobile number is required'),
+    // .matches(/^\d{10}$/, 'Mobile number must be exactly 10 digits'),
+  mobileNo: yup.object().shape({
     // code: yup.string().required('Country code is required'),
     code: yup.string(),
     number: yup
@@ -25,7 +25,7 @@ export const contactSchema = yup.object().shape({
       .matches(/^\d{10}$/, 'Mobile number must be exactly 10 digits'),
   }),
   
-  message: yup
+  projectDetails: yup
     .string()
     .optional()
     .max(500, 'Message must be at most 500 characters'),
