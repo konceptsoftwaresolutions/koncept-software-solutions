@@ -6,6 +6,7 @@ import { TbSettingsCode } from "react-icons/tb";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { MdOutlineAttachEmail } from "react-icons/md";
 import { MdOutlineTextsms } from "react-icons/md";
+import { FaUserCog } from "react-icons/fa";
 
 // components
 import ServiceCard from "../../components/cards/ServiceCard";
@@ -28,6 +29,14 @@ const Services = () => {
             <div className="w-full flex justify-center items-center">
                 <div className="my-5 w-[90%] py-5 lg:w-[95%]">
                     <Slider {...sliderSettings} className="py-5">
+                        {/* for seo points -start */}
+                        <div>
+                            <div className="flex justify-center items-center w-full">
+                                <ServiceCard icon={<FaUserCog size={80} />} title="Custom CRM Development" text={"Enhance your customer relationships with CRM solutions designed specifically for your business. Our custom-built CRMs streamline sales, automate tasks, and improve retention. Whether it’s lead management, sales tracking, or automated workflows, we deliver a system that integrates seamlessly with your operations, helping you save time and drive growth."} />
+                            </div>
+                        </div>
+                        {/* for seo points - end */}
+
                         <div>
                             <div className="flex justify-center items-center w-full">
                                 <ServiceCard icon={<CgBrowser size={80} />} title="Web Design & Development" text={"At Koncept Software Solutions Infotech, we understand the power of mobile apps to transform your business. Whether you envision a sleek and intuitive e-commerce platform, an engaging game that keeps users hooked, or a productivity tool that streamlines workflows, our team of expert iOS and Android app developers is here to bring your vision to life."} />
