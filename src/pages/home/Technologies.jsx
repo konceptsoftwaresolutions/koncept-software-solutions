@@ -9,8 +9,8 @@ import { FaDocker } from "react-icons/fa";
 const Technologies = () => {
     return <>
         <div className="w-full py-20 px-4 flex flex-col bg-blue-50 justify-center items-center">
-            <h2 className="text-xl md:text-3xl my-text font-medium text-center text-[#000]">Technology and Development Stack</h2>
-            <p className="my-text text-center my-6">We Are An Expert Software Development Company And Use The Best Technologies And Platforms To Deliver High-Quality Products.</p>
+            <h2 className="text-xl md:text-3xl my-text font-medium text-center text-[#000]">Our Advanced Technology Stack for Scalable CRM and Web Solutions</h2>
+            <p className="my-text text-center my-6">Our development team uses industry-leading technologies to build scalable CRM systems, websites, and mobile applications that ensure performance and security. Our stack includes HTML5, React, Node.js, MongoDB, Docker, and more.</p>
 
             <div className="w-full flex flex-col overflow-hidden gap-y-4 md:flex-row justify-evenly mt-8 items-center">
                 <motion.div

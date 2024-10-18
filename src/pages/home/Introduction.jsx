@@ -35,7 +35,7 @@ const Introduction = () => {
                 <div id="contactus" className="absolute top-0 flex justify-center items-center left-0 backdrop-brightness-[0.7] h-full w-full">
                     <div className="w-full lg:w-1/2 flex justify-end items-start lg:items-center">
                         <div className="w-[95%] sm:w-[85%] flex flex-col gap-y-4 justify-start items-start">
-                            <h2 className="my-text text-[22px] sm:text-[30px] lg:text-[40px] leading-[28px] sm:leading-[45px] text-white">Building Scalable iOS & Android Apps for Growth-Minded Businesses</h2>
+                            <h1 className="my-text text-[22px] sm:text-[30px] lg:text-[32px] leading-[28px] sm:leading-[45px] text-white">Expert CRM Systems, Website Development, and Marketing Solutions | Serving Businesses PAN India</h1>
 
                             <h2 className="my-text text-[18px] sm:text-lg lg:text-xl text-yellow-400">We Design, Develop & Drive Your Digital Success.</h2>
 

@@ -59,7 +59,7 @@ const TearmsCondition = () => {
                 <Heading><span className="text-custom-blue">Terms and</span> Conditions</Heading>
                 <Div>
                     <Title>Introduction</Title>
-                    <P>These terms and conditions (the "Terms") govern your use of the website and mobile app development services provided by Koncept Software Solutions Infotech Pvt. Ltd. By using the Company's services, you agree to these Terms.</P>
+                    <P>These terms and conditions (the "Terms") govern your use of the website and mobile app development services provided by Koncept Software Solutions By using the Company's services, you agree to these Terms.</P>
                 </Div>
 
                 <Div>

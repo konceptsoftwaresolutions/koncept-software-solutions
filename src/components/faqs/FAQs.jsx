@@ -49,7 +49,7 @@ const FAQs = () => {
         }
     ]
     return <>
-        <div className="py-3 w-full flex flex-col justify-center items-center text-black font-montserrat leading-normal not-italic">
+        <div className="py-10 w-full flex flex-col justify-center items-center text-black font-montserrat leading-normal not-italic">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">Frequently Asked Questions (FAQs)</h2>
             <div className="py-4 px-10">
                 {

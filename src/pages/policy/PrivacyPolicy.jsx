@@ -90,7 +90,7 @@ const PrivacyPolicy = () => {
 
                 <Div>
                     <Title>4. How do we protect your data?</Title>
-                    <P>We protect the personal information you provide by adhering to generally accepted industry standards, both during transmission and once we receive it. Yet, there is only a partially safe way to transmit data over the Internet, via a mobile device, or to store it electronically. The security of any information you communicate to us, or to or from our online goods or services, cannot, therefore, be guaranteed or warranted by Koncept Software Solutions Infotech Pvt. Lt., despite our best efforts.</P>
+                    <P>We protect the personal information you provide by adhering to generally accepted industry standards, both during transmission and once we receive it. Yet, there is only a partially safe way to transmit data over the Internet, via a mobile device, or to store it electronically. The security of any information you communicate to us, or to or from our online goods or services, cannot, therefore, be guaranteed or warranted by Koncept Software Solutions, despite our best efforts.</P>
                 </Div>
 
                 <Div>
