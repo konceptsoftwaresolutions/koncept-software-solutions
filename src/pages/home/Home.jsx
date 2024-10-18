@@ -8,6 +8,7 @@ import Services from "./Services";
 import Technologies from "./Technologies";
 import Portfolio from "./Portfolio";
 import Companies from "./Companies";
+import FAQs from "../../components/faqs/FAQs";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -26,6 +27,7 @@ const Home = () => {
             <Services />
             <Technologies />
             <Portfolio />
+            <FAQs />
         </main>
     </>
 }
