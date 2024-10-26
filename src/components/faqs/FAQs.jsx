@@ -1,5 +1,6 @@
 import React from "react";
 import Accordion from "../dropdowns/Accordion";
+import { motion } from "framer-motion";
 
 const FAQs = () => {
     const data = [
@@ -44,16 +45,27 @@ const FAQs = () => {
             text: "Our process begins with a free consultation where we discuss your needs and goals. Once we understand your requirements, we design a customized plan, providing full transparency on cost, timeline, and deliverables. We work closely with you throughout the development process to ensure the final product meets all your expectations."
         },
         {
-            title :"11. How do you ensure transparency in your pricing?",
+            title: "11. How do you ensure transparency in your pricing?",
             text: "We believe in honest and transparent pricing. There are no hidden charges in our services, and we provide a detailed breakdown of costs upfront. Clients only need to cover the development cost, server charges (if applicable), and a nominal maintenance fee, which is clearly communicated from the start."
         }
     ]
     return <>
         <div className="py-10 w-full flex flex-col justify-center items-center text-black font-montserrat leading-normal not-italic">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">Frequently Asked Questions (FAQs)</h2>
-            <div className="py-4 px-10">
+            <div className="py-4 px-10 overflow-hidden">
                 {
-                    data?.map((item, index) => (<Accordion key={index} {...item} />))
+                    data?.map((item, index) => (
+                        <motion.div
+                            key={index} // Ensure the key is on motion.div
+                            initial={{ x: -200, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: true }}
+                            className="w-full flex justify-center items-center"
+                        >
+                            <Accordion {...item} />
+                        </motion.div>
+                    ))
                 }
             </div>
         </div>
