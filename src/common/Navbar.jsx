@@ -37,6 +37,8 @@ const Navbar = () => {
             // }
             if (path.hash && path.hash !== "") {
                 setIsActive(path.hash);
+            } else if(path.pathname.includes("course")){
+                setIsActive("course");
             } else {
                 setIsActive("home");
             }
@@ -72,6 +74,10 @@ const Navbar = () => {
                     Contact Us
                 </LinkButton>
 
+                <LinkButton to={"course"} active={isActive === "course"}>
+                    Course
+                </LinkButton>
+
                 <MenuButton menu={industriesMenu}>
                     Industries
                 </MenuButton>
@@ -105,7 +111,7 @@ const Navbar = () => {
                         </a>
                     </div>
                 </div>
-                <div className={`w-auto lg:w-full ${!path.pathname.match("landing") ? "py-4": "py-7"} hidden md:flex gap-x-10 justify-start ml-10 lg:ml-0 items-center`}>
+                <div className={`w-auto lg:w-full ${!path.pathname.match("landing") ? "py-4" : "py-7"} hidden md:flex gap-x-10 justify-start ml-10 lg:ml-0 items-center`}>
                     {
                         !path.pathname.match("landing") ? <>
                             <LinkButton hash="home" active={isActive === "home"} onClick={() => setIsActive("home")}>
@@ -126,6 +132,10 @@ const Navbar = () => {
 
                             <LinkButton hash="contactus" active={isActive === "contactus"} onClick={() => setIsActive("contact")}>
                                 Contact Us
+                            </LinkButton>
+
+                            <LinkButton to={"course"} active={isActive === "course"} onClick={() => setIsActive("course")}>
+                                Course
                             </LinkButton>
 
                             <MenuButton menu={industriesMenu}>

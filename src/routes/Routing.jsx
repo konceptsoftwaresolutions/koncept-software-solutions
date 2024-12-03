@@ -9,6 +9,7 @@ const Ecommerce = lazy(() => import("../pages/ecommerce/Ecommerce"));
 const Delivery = lazy(() => import("../pages/delivery/Delivery"));
 const Grocery = lazy(() => import("../pages/grocery/Grocery"));
 const LandingPage = lazy(() => import("../pages/landing/LandingPage"));
+const Course = lazy(() => import("../pages/course/Course"));
 
 const Routing = () => {
     return <>
@@ -20,6 +21,7 @@ const Routing = () => {
             <Route path="/grocery-app-development" element={<Grocery/>} />
             <Route path="/food-delivery-app" element={<Delivery />} />
             <Route path="/landing" element={<LandingPage />} />
+            <Route path="/course" element={<Course />} />
         </Routes>
     </>
 }
